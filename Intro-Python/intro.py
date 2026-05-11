@@ -8,3 +8,13 @@ def say_howdy():
     print('howdy')
 
 print(say_howdy())
+
+'''
+multi line ignore not in green?
+'''
+
+# Ignore
+
+# muti
+# line 
+# ignore
