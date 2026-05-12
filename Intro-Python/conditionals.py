@@ -29,7 +29,7 @@ match https_status:
         print("Unknown status!")
 
  # FOR LOOPS
-
+'''
 favourites = ["cake", "ice cream", "apple pie"]
 
 for i in range(10):
@@ -42,3 +42,12 @@ count = 0
 while count  < len(favourites):
 		print("while I like this desert ", favourites[count])
 		count += 1
+        '''
+
+favorites = ['Creme Brulee', 'Apple Pie', 'Churros', 'Tiramisú', 'Chocolate Cake', "Pudding"]
+
+for dessert in favorites:
+    if dessert == 'Pudding':
+        print('Yes one of my favorite desserts is', dessert) 
+    else:
+        print('No sorry, that dessert is not on my list')
