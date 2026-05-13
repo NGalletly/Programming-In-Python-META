@@ -62,3 +62,14 @@ for dessert in favorites:
         break 
     else:
         print('No sorry, not a dessert on my list')
+
+# CONTROL statement: Continue
+
+favorites = ['Creme Brulee', 'Apple Pie', 'Churros', 'Tiramisú', 'Chocolate Cake']
+
+for dessert in favorites:
+    if dessert == 'Churros':
+        continue
+    print('Other desserts I like are', dessert) 
+
+#Will skip churros
