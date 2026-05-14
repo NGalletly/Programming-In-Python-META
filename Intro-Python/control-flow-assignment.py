@@ -34,13 +34,11 @@ num_list = [33,42,5,66,77,22,16,79,36,62,78,43,88,39,53,67,89,11]
     
 # print(count)
 
-bill = 175.00
 
-def taxCalc(bill):
-    tax_rate = 15
+def taxCalc(bill, tax_rate):
     total_tax = (bill * tax_rate) / 100
     print("Total tax:", total_tax)
     return "Total tax:", total_tax
  
 
-print(taxCalc(bill))
+print(taxCalc(100,15))
