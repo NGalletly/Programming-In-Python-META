@@ -7,4 +7,4 @@ try:
 except FileNotFoundError as e:
     print("File not found!", e)
 except Exception as e:
-    pring("Something went wrong:", e)
+    print("Something went wrong:", e)
