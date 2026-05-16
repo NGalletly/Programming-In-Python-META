@@ -14,7 +14,10 @@ def read_file(file_name):
         str: Entire contents of the file.
     """
     ### WRITE SOLUTION HERE
-    
+    with open(file_name, "r") as file:
+        text = file.read()
+        print(text)
+        return text
 
 def read_file_into_list(file_name):
     """ Reads a file and returns a list where each element is a line in the file.
@@ -31,8 +34,13 @@ def read_file_into_list(file_name):
         list: List where each item is a line from the file.
     """
     ### WRITE SOLUTION HERE
-    
+    with open(file_name, "r") as file:
+        file_contents = file.readlines()
+        print(file_contents)
+        return file_contents
 
+    
+# read_file_into_list("sampletext.txt")
 
 def write_first_line_to_file(file_contents, output_filename):
     """ Writes the first line of a given string to an output file.
@@ -49,6 +57,9 @@ def write_first_line_to_file(file_contents, output_filename):
         output_filename (str): Name of the file to write the first line into.
     """
     ### WRITE SOLUTION HERE
+    first_line = file_contents.split("\n")[0]
+    with open(output_filename, "w") as file:
+        file.write(first_line)
     
 
 
@@ -67,7 +78,18 @@ def read_even_numbered_lines(file_name):
         list: List of even-numbered lines in the file (2, 4, 6, etc.).
     """
     ### WRITE SOLUTION HERE
-    
+    with open(file_name, 'r') as file:
+        text = file.readlines()
+        even_list = []
+        i = 0
+        while i < len(text):
+            if i % 2 != 0:
+                even_list.append(text[i])
+            i+=1
+        return even_list
+
+        
+
 
 
 def read_file_in_reverse(file_name):
@@ -86,7 +108,12 @@ def read_file_in_reverse(file_name):
         list: List of lines from the file in reverse order.
     """
     ### WRITE SOLUTION HERE
-    
+    with open(file_name, 'r') as file:
+        text = file.readlines()
+        text.reverse()
+        print(text)
+        return text
+
 
 
 # Sample commands to run/test your implementations.
