@@ -11,4 +11,14 @@ reversed_coffees_list = []
 for x in reversed_coffees_map:
     reversed_coffees_list.append(x)
 
-print(reversed_coffees_list)
+# print(reversed_coffees_list)
+
+# Pure function
+numbers = [1,2,3]
+def add_to_list(lst,item):
+    clone = lst.copy()
+    clone.append(item)
+    return clone
+
+print(add_to_list(numbers,4))
+
