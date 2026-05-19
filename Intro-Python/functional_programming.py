@@ -20,5 +20,32 @@ def add_to_list(lst,item):
     clone.append(item)
     return clone
 
-print(add_to_list(numbers,4))
+# print(add_to_list(numbers,4))
+
+# Recursion
+
+def example(obj):
+    #code
+    return example(obj)
+
+
+# Without recursion
+def find_factorial_by_looping(n):
+    if n <0:
+        return 0
+    else:
+        factorial = 1
+        for i in range(1, n+1):
+            factorial = factorial *i
+        return factorial
+    
+# With recursion
+def find_factorial_recursive(n):
+    if n ==1:
+        return 1
+    else:
+        return n* find_factorial_recursive(n-1)
+
+
+
 
