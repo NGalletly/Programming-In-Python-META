@@ -63,18 +63,18 @@ readings = [22, "25", 19, "24", 21, "26"]
 
 # Your code here:
 # task_3 = [value_if_true if condition else value_if_false for item in iterable]
-int_list = [int(x) if type(x)!= int else x for x in readings]
-print("integer list", int_list)
-def return_type(list):
-    list_copy = list.copy()
-    i=0
-    for i in range(len(list)):
-        if type(i) == int:
-            list_copy[i] = True
-            i+=1
-    return list_copy
+# int_list = [int(x) if type(x)!= int else x for x in readings]
+# print("integer list", int_list)
+# def return_type(list):
+#     list_copy = list.copy()
+#     i=0
+#     for i in range(len(list)):
+#         if type(i) == int:
+#             list_copy[i] = True
+#             i+=1
+#     return list_copy
 
-print(return_type(readings))
+# print(return_type(readings))
 
 
 # ---------------------------------------------------------------------
@@ -85,12 +85,12 @@ print(return_type(readings))
 #
 # Expected Output: ['p', 'y', 't', 'h', 'n']
 # ---------------------------------------------------------------------
-# word = "python"
+word = "python"
 
 # Your code here:
 # task_4 = 
-
-
+# remove_vowels = [x for x in word if x not in "aeiou"]
+# print(remove_vowels)
 # ---------------------------------------------------------------------
 # CHALLENGE 5: Matrix Filter (Advanced)
 # Given a 2D matrix (a list of sublists), write a nested list comprehension 
