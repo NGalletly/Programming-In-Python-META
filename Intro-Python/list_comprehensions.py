@@ -91,6 +91,7 @@ word = "python"
 # task_4 = 
 # remove_vowels = [x for x in word if x not in "aeiou"]
 # print(remove_vowels)
+
 # ---------------------------------------------------------------------
 # CHALLENGE 5: Matrix Filter (Advanced)
 # Given a 2D matrix (a list of sublists), write a nested list comprehension 
@@ -98,7 +99,9 @@ word = "python"
 #
 # Expected Output: [3, 6, 9, 12]
 # ---------------------------------------------------------------------
-# matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12]]
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12]]
 
 # Your code here:
-# task_5 =
+# task_5 =  
+flat_multiples_of_three = [num for row in matrix for num in row if num % 3 ==0 ]
+print(flat_multiples_of_three)
