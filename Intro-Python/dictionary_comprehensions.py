@@ -53,11 +53,12 @@ print(dict_price_filter)
 #
 # Expected Output: {'alice': 'admin', 'bob': 'user', 'charlie': 'user'}
 # ---------------------------------------------------------------------
-# users = {"Alice": "admin", "Bob": "user", "Charlie": "user"}
+users = {"Alice": "admin", "Bob": "user", "Charlie": "user"}
 
 # Your code here:
 # dict_task_3 = 
-
+lowercase_users = {key.lower():value for key, value in users.items()}
+print(lowercase_users)
 
 # ---------------------------------------------------------------------
 # CHALLENGE 4: Name Length Map (Dict)
@@ -68,11 +69,12 @@ print(dict_price_filter)
 #
 # Expected Output: {'python': 6, 'c': 1, 'java': 4, 'golang': 6}
 # ---------------------------------------------------------------------
-# languages = ["python", "c", "java", "golang"]
+languages = ["python", "c", "java", "golang"]
 
 # Your code here:
 # dict_task_4 =
-
+lang_dictionary = {items: len(items) for items in languages}
+print(lang_dictionary)
 
 
 
