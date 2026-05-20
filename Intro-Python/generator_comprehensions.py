@@ -68,3 +68,10 @@ huge_dataset = [2, 5, 7, 10, 11, 15, 18, 20, 22, 25, 29, 30, 33]
 multiples_five = (x for x in huge_dataset if x % 5 == 0)
 for item in multiples_five:
     print(item, end = " ")
+
+
+print()
+
+a = [[96], [69]]
+
+print(''.join(list(map(str, a))))
