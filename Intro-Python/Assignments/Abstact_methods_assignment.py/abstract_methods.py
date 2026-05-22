@@ -3,7 +3,7 @@ from abc import ABC, abstractmethod
 
 
 # Class Bank
-class Bank(""" WRITE YOUR CODE HERE """):
+class Bank(ABC):
     """An abstract bank class
 
     [IMPLEMENT ME]
@@ -16,10 +16,17 @@ class Bank(""" WRITE YOUR CODE HERE """):
     """
 
     ### WRITE YOUR CODE HERE
+    def basicinfo(self):
+        print("This is a generic bank")
+        return "Generic bank: 0"
+
+    @abstractmethod
+    def withdraw(self, amount):
+        pass
 
 
 # Class Swiss
-class Swiss(""" WRITE YOUR CODE HERE"""):
+class Swiss(Bank):
     """A specific type of bank that derives from class Bank
 
     [IMPLEMENT ME]
@@ -46,6 +53,22 @@ class Swiss(""" WRITE YOUR CODE HERE"""):
     """
 
     ### WRITE YOUR CODE HERE
+    def __init__(self):
+        super().__init__()
+        self.bal = 1000
+
+    def basicinfo(self):
+        print("This is the Swiss Bank")
+        return "Swiss Bank: " + str(self.bal)
+
+    def withdraw(self, amount):
+        if amount > self.bal:
+            print("Insufficient funds")
+            return self.bal
+        self.bal -= amount
+        print(f"Withdrawn amount: {amount}")
+        print(f"New Balance: {self.bal}")
+        return self.bal
 
 
 # Driver Code
