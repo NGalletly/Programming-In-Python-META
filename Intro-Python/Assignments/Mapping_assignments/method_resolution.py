@@ -12,3 +12,4 @@ class c(b):
 
 print(c.mro())
 print(c.num)
+print(help(c))
