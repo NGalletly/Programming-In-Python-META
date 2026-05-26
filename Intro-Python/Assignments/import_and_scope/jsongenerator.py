@@ -2,9 +2,23 @@
 Import statements:
     1. Import the built-in json python package
     2. From employee.py, import the details function and the employee_name, age, title variables
+
+## from the employee.py:
+    employee_name = "Mario"
+age = "55"
+title = "owner"
+
+
+def details():
+    print("Employee name is: ", employee_name)
+    print("Employee age is: ", age)
+    print("Employee title is: ", title)
+
 """
 
 ### WRITE IMPORT STATEMENTS HERE
+import json
+from employee import details, employee_name, age, title
 
 
 def create_dict(name, age, title):
@@ -25,6 +39,8 @@ def create_dict(name, age, title):
                title - string)
     """
     ### WRITE SOLUTION HERE
+    employee_dict = {"first_name": str(name), "age": int(age), "title": str(title)}
+    return employee_dict
 
 
 def write_json_to_file(json_obj, output_file):
@@ -38,6 +54,8 @@ def write_json_to_file(json_obj, output_file):
         json_obj: json string containing employee information
     """
     ### WRITE SOLUTION HERE
+    with open(output_file, "w") as file:
+        file.write(json_obj)
 
 
 def main():
@@ -55,7 +73,7 @@ def main():
     ### WRITE YOUR CODE BY MODIFYING THE LINE BELOW
     # In the line below replace the None keyword with your code.
     # The format should look like: variable = json.dumps(dict)
-    json_object = None
+    json_object = json.dumps(employee_dict)
     print("json_object: " + str(json_object))
 
     # Write out the json object to file
