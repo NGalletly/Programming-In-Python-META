@@ -1,2 +1,8 @@
+# import sample
+# import sample
+import importlib
 import sample
-import sample
+
+importlib.reload(sample)
+importlib.reload(sample)
+importlib.reload(sample)
