@@ -9,8 +9,6 @@ Import statements:
 ### WRITE IMPORT STATEMENTS HERE
 import pytest
 import spellcheck
-import nltk
-from nltk.tokenize import word_tokenize
 
 # String variables to be tested
 alpha = "Checking the length & structure of the sentence."
@@ -39,10 +37,8 @@ def test_length(input_value):
                    in the input_value() function
     """
     ### WRITE SOLUTION CODE HERE
-    word_list = word_tokenize(input_value)
-
-    if len(word_list) < 10 and len(input_value) < 50:
-        assert True
+    assert int(spellcheck.word_count(input_value)) < 10
+    assert int(spellcheck.char_count(input_value)) < 50
 
 
 # Second test function test_struc()
@@ -59,11 +55,8 @@ def test_struc(input_value):
                    in the input_value() function
     """
     ### WRITE SOLUTION CODE HERE
-    first_char = input_value[0].upper()
-    last_char = input_value[-1]
-
-    if first_char == input_value[0] and last_char == ".":
-        assert True
+    assert spellcheck.first_char(input_value).isupper()
+    assert spellcheck.last_char(input_value) == "."
 
 
 # Run these tests with `python3 -m pytest test_spellcheck.py`
